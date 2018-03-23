@@ -1,0 +1,143 @@
+<html class="noselect" oncontextmenu="return false;"><head>
+	<title>Login</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<style>
+	.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+footer {
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    overflow:hidden;
+}
+img {
+display: inline;
+}
+a {
+text-decoration: none;
+color: white;s
+}
+footer {
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    overflow:hidden;
+}
+html {
+color: white;
+	background : url("https://raw.githubusercontent.com/AppleGeekSquad/berlus.github.io/master/background.jpg")
+}
+#logo {  width: 85px; length: 85px; }
+h1 {
+font-family: Impact;
+font-size: 100px;
+color: black;
+display:inline;
+text-align: center;
+}
+p {
+color: white;
+font-family: cursive;
+font-size: 15px;
+}
+.button {
+color: white;
+padding: 10px 15px;
+background-color: black;
+transition: .5s;
+border-radius: 5px;
+font-size: 25px;
+}
+.button:hover {
+background-color: black;
+opacity: 0.8;
+position: relative;
+-webkit-animation-name: example;
+-webkit-animation-duration: 4s;
+animation-name: example;
+animation-duration: .5s;
+cursor: hand;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+@keyframes example {
+    0%   {left:0px; top:0px;}
+	25%  {left:0px; top:-1.25px}
+	50%  {left:0px; top:-2.5px;}
+	75%  {left:0px; top:-3.75px;}
+    100% {left:0px; top:-5px;}
+}
+.circle {
+background: #f00;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+</style>
+<script language="javascript">function back() {
+window.open("index.html","_self")
+}
+
+var users = new Array();
+var passes = new Array();
+
+function init(){
+	users.push("Admin");
+	passes.push("alpine");
+	users.push("matth");
+	passes.push("04302003");
+	users.push("appletecher03");
+	passes.push("Matthew04302003");	
+}
+
+function login(){
+	
+	
+	for(var i = 0;i<users.length;i++){
+		if(document.getElementById("user").value == users[i]){
+			if(document.getElementById("pass").value == passes[i]){
+				window.open("https://applegeeksquad.github.io/berlus.github.io/");	
+			}
+		}
+	}
+}
+
+</script>
+</head>
+<body onload="init();">
+
+    <center>
+<div>
+<img src="https://applegeeksquad.github.io/berlus.github.io/berlus_logo.png" alt="logo" class="logo" id="logo" draggable="false">
+<h1>Login</h1>
+
+</div>
+    
+
+<input placeholder=" Username" type="text" id="user" style="border:2px solid black; border-radius:5px; height: 22px; width: 230px;"><br>
+<input placeholder=" Password" type="password" id="pass" style="border:2px solid black; border-radius:5px; height: 22px; width: 230px;"><br>
+<p></p>
+<span><button type="button" onclick="back()" class="button">Back</button><input class="button" type="button" value="Submit" onclick="login();"></span></center>
+<p id="result"></p>
+<center>
+<footer>
+     <p style="color: white;">© Copyright 2017 Berlus</p>    
+</footer>
+</center>
+</body></html>
